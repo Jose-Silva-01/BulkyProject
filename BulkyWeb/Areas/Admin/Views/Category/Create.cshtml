@@ -1,0 +1,57 @@
+﻿@model Category
+<!-- 
+    You don't need pass anything through the view, since the model will think 
+    of it as a new category with the default values
+-->
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3"> 
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Create Category</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post">
+            <div class="border p-3">
+                @*<div asp-validation-summary="All">
+
+                </div>*@
+
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Name " class="ms-2"></label>
+                    <input asp-for="Name" class="form-control border-0 shadow"  />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="DisplayOrder" class="ms-2"></label>
+                    <input asp-for="DisplayOrder" class="form-control border-0 shadow"  />
+                    <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-primary form-control">Create</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-primary form-control">Back To List</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+
+
+<!-- This is how you implement CLIENT SIDE VALIDATION -->
+<!-- .Net has scripts of java script that implements it, you just need to add those scripts -->
+<!-- to this section, which is the validation scripts on Views/Shared/_ValidationScriptsPartial -->
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial"/>
+    }
+}

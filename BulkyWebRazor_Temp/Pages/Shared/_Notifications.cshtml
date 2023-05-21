@@ -1,0 +1,19 @@
+﻿@*
+    TempData's purpose is to show notifications, it's data that goes from one page to the other
+    with this solo purpose
+*@
+@if (TempData["success"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@TempData["success"]');
+    </script>
+}
+@if (TempData["error"] != null)
+{
+    <script type="text/javascript">
+        toastr.error('@TempData["error"]');
+    </script>
+
+}
