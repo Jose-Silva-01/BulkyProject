@@ -179,6 +179,7 @@ namespace BulkyWeb.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, SD.Role_Customer);
                     _logger.LogInformation("User created a new account with password.");
 
                     if(!string.IsNullOrEmpty(Input.Role))
