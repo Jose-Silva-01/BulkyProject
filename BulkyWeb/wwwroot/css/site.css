@@ -9,12 +9,12 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .content-wrap {
-    padding-bottom: 2.5rem; /* footer height */
+    padding-bottom: 5rem; /* footer height */
 }
 
 .footer {
     margin-top: auto;
-    /*height: 2.5rem;*/ */ /* Footer height */
+    /*height: 2.5rem;*/ /* Footer height */
 }
 
 .divider-text:before,

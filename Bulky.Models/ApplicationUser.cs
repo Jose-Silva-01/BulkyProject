@@ -25,5 +25,11 @@ namespace Bulky.Models
         [ValidateNever] // we don't want to validate it because it will be assigned to a user after it's creation
         public int? CompanyId { get; set; }
 
+        [ValidateNever]
+        public Company? Company { get; set; }
+
+        [NotMapped]
+        public string Role { get; set; }
+
     }
 }
